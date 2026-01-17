@@ -8,6 +8,8 @@ interface CreatePollModalProps {
 }
 
 const CreatePollModal: React.FC<CreatePollModalProps> = ({ isOpen, onClose, onSubmit }) => {
+  console.log(onSubmit);
+  
   const [eventName, setEventName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
