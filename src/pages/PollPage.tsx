@@ -157,7 +157,7 @@ const handleDeleteEvent = async (eventName: string) => {
     const token = localStorage.getItem('authToken') || sessionStorage.getItem('authToken');
     const encodedName = encodeURIComponent(eventName);
     
-    const response = await fetch(`https://hermanbackend.onrender.com/admin/events/${encodedName}`, {
+    const response = await fetch(`https://hermanbackend.onrender.com/deleteEvent/${encodedName}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`

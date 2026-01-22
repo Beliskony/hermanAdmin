@@ -33,13 +33,13 @@ const CreatePollModal: React.FC<CreatePollModalProps> = ({ isOpen, onClose, onSu
     }
 
     // Appel API pour créer le sondage
-    const response = await fetch('https://hermanbackend.onrender.com/newEvent', { // Changé
+    const response = await fetch('https://hermanbackend.onrender.com/newEvent', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       },
-        body: JSON.stringify({ eventName: eventName.trim() }), // Vérifie le nom du champ
+        body: JSON.stringify({ EventName: eventName.trim() }), // Vérifie le nom du champ
     });
 
     // Vérifier la réponse
